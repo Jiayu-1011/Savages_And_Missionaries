@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="draw:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/draw_jar</output-path>
+    <root id="archive" name="draw.jar">
+      <element id="module-output" name="Savages_And_Missionaries_Edition2" />
+      <element id="extracted-dir" path="/Library/Java/UserInstalled/algs4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/19.0.0/annotations-19.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

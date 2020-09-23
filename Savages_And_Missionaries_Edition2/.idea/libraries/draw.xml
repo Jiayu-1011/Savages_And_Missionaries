@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="draw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/draw/out/artifacts/draw_jar/draw.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
