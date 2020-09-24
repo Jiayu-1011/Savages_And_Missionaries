@@ -142,8 +142,8 @@ public class Display_Initial {
 
     public void InitialStateBar(int round_num){
         StdDraw.setPenColor(Color.black);
-        StdDraw.text(PERSON_LEFT_X, PERSON_RIGHT_X, "左岸");
-        StdDraw.text(PERSON_RIGHT_X, PERSON_RIGHT_X, "右岸");
+        StdDraw.text(COAST_LEFT_X - 20, PERSON_RIGHT_X, "左岸");
+        StdDraw.text(COAST_RIGHT_X + 20, PERSON_RIGHT_X, "右岸");
         StdDraw.line(COAST_LEFT_X, COAST_UP_Y, COAST_LEFT_X, COAST_DOWN_Y);//左岸际线
         StdDraw.line(COAST_RIGHT_X, COAST_UP_Y, COAST_RIGHT_X, COAST_DOWN_Y);//右岸际线
         StdDraw.text(0, PERSON_RIGHT_X, "第" + round_num + "轮");
