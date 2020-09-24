@@ -8,7 +8,7 @@ import edu.princeton.cs.algs4.StdOut;
 
 import java.awt.*;
 
-public class Display extends Display_Initial{
+public class Display extends BasicDisplay{
     int[][] rounds;
     int ms;
     int N, K;
@@ -82,7 +82,6 @@ public class Display extends Display_Initial{
                 if(state[0] + state[1] == 0) {
                     StdDraw.text(0,0,"过河已完成！");
                     StdDraw.show();
-                    StdDraw.pause(2 * ms);
                     return;
                 }
                 //Arriving

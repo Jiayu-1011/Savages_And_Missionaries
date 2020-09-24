@@ -7,7 +7,7 @@ import edu.princeton.cs.algs4.StdDraw;
 
 import java.awt.*;
 
-public class Display_Initial {
+public class BasicDisplay {
     protected final static int NUM_UPPER_LIMIT = 5;
     protected final static Color MISSIONARY_COLOR = Color.RED;
     protected final static Color SAVAGE_COLOR = Color.BLUE;
@@ -36,7 +36,7 @@ public class Display_Initial {
     double left_savage_depart_interval, left_missionary_depart_interval, right_savage_depart_interval, right_missionary_depart_interval;
     double savage_on_ship_interval, missionary_on_ship_interval;
 
-    public Display_Initial(int N,int K,int[][] rounds){
+    public BasicDisplay(int N,int K,int[][] rounds){
         this.rounds = rounds;
         this.ms = ROUND_TIME;
         this.N = N;

@@ -44,6 +44,11 @@ public class Search {
     }
 
     public State Search() {
+        State startState = new State(0, this.n, this.n, null);
+        if (this.k >= 2 * this.n) {
+            return new State(1, 0, 0, startState);
+        }
+
         Comparator<State> less = new Comparator<State>() {
             @Override
             public int compare(State o1, State o2) {
@@ -52,15 +57,19 @@ public class Search {
         };
         PriorityQueue<State> openList = new PriorityQueue<>(less);
         ArrayList<State> closedList = new ArrayList<>();
-        openList.add(new State(0, this.n, this.n, null));
+        openList.add(startState);
         State targetState = new State(1, 0, 0, null);
 
         while (!openList.isEmpty()) {
             State s = openList.peek();
             openList.poll();
             closedList.add(s);
-            for (int savagesMove = 0; savagesMove <= this.k; savagesMove++)
-                for (int missionariesMove = 0; missionariesMove <= this.k; missionariesMove++) {
+            int savagesOnAshore = s.isLeftSide() ? s.getSavages() : (this.n - s.getSavages());
+            int missionariesOnAshore = s.isLeftSide() ? s.getMissionaries() : (this.n - s.getMissionaries());
+            int savagesCanMove = (savagesOnAshore < this.k) ? savagesOnAshore : this.k;
+            int missionariesCanMove = (missionariesOnAshore < this.k) ? missionariesOnAshore : this.k;
+            for (int savagesMove = savagesCanMove; savagesMove >= 0; savagesMove--)
+                for (int missionariesMove = missionariesCanMove; missionariesMove >= 0; missionariesMove--) {
                     State stateAfter = new State(s.getShips() + 1, s.getSavages() + savagesMove * (s.isLeftSide() ? -1 : 1),
                             s.getMissionaries() + missionariesMove * (s.isLeftSide() ? -1 : 1), s);
                     if (isLegal(s, stateAfter) && !closedList.contains(stateAfter) && !openList.contains(stateAfter)) {
