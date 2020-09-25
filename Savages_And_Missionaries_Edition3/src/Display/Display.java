@@ -1,14 +1,11 @@
 package Display;
 
-import Model.Missionary;
-import Model.Savage;
 import Model.Ship;
 import edu.princeton.cs.algs4.StdDraw;
-import edu.princeton.cs.algs4.StdOut;
 
 import java.awt.*;
 
-public class Display extends BasicDisplay{
+public class Display extends BasicDisplay {
     int[][] rounds;
     int ms;
     int N, K;
@@ -123,8 +120,7 @@ public class Display extends BasicDisplay{
             Drawing(state, round_num, isDeparting);
             isDeparting = !isDeparting;
         }
-        StdOut.print("过河已完成！");
-        StdOut.print("Entire process drawn.");
+        System.out.println("Entire process drawn.");
     }
 
     public void initAndDraw() {

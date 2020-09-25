@@ -146,7 +146,7 @@ public class BasicDisplay {
         StdDraw.text(COAST_RIGHT_X + 20, PERSON_RIGHT_X, "右岸");
         StdDraw.line(COAST_LEFT_X, COAST_UP_Y, COAST_LEFT_X, COAST_DOWN_Y);//左岸际线
         StdDraw.line(COAST_RIGHT_X, COAST_UP_Y, COAST_RIGHT_X, COAST_DOWN_Y);//右岸际线
-        StdDraw.text(0, PERSON_RIGHT_X, "第" + round_num + "轮");
+        StdDraw.text(0, PERSON_RIGHT_X, "第" + (round_num + 1) + "轮");
         new Savage(-20, PERSON_RIGHT_X - 28).draw();
         StdDraw.text(5, PERSON_RIGHT_X - 25, ": 野人");
         new Missionary(-20, PERSON_RIGHT_X - 50).draw();
